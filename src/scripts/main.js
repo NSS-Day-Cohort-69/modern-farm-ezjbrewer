@@ -7,6 +7,8 @@ import { createWheat } from "./seeds/wheat.js";
 import { createSunflower } from "./seeds/sunflower.js";
 import { createSoybean } from "./seeds/soybean.js";
 
+import { addPlant, usePlants } from "./field.js";
+
 const yearlyPlan = createPlan()
 
 const cornSeed = createCorn("Corn", 180, 6)
@@ -16,6 +18,12 @@ const wheatSeed = createWheat("Wheat", 230, 6)
 const sunflowerSeed = createSunflower("Sunflower", 380, 3)
 const soybeanSeed = createSoybean("Soybean", 2, 4)
 
-console.log("Welcome to the main module")
+const addedCorn = addPlant(cornSeed)
+const addedAsparagus = addPlant(asparagusSeed)
+const addedPotato = addPlant(potatoSeed)
+const addedWheat = addPlant(wheatSeed)
+const addedSunflower = addPlant(sunflowerSeed)
+const addedSoybean = addPlant(soybeanSeed)
 
-console.log(cornSeed, asparagusSeed, potatoSeed, wheatSeed, sunflowerSeed, soybeanSeed)
+
+console.log("Welcome to the main module")
