@@ -15,17 +15,17 @@ export const plantSeeds = (yearlyPlan) => {
     for (const row of yearlyPlan) {
         for(const crop of row) {
             if (crop === "Corn") {
-                cropsInField.push(createCorn("Corn", 180, 6))
+                cropsInField.push(createCorn())
             } else if (crop === "Asparagus") {
-                cropsInField.push(createAsparagus("Asparagus", 24, 4))
+                cropsInField.push(createAsparagus())
             } else if (crop === "Potato") {
-                cropsInField.push(createPotato("Potato", 32, 2))
+                cropsInField.push(createPotato())
             } else if (crop === "Wheat") {
-                cropsInField.push(createWheat("Wheat", 230, 6))
+                cropsInField.push(createWheat())
             } else if (crop === "Sunflower") {
-                cropsInField.push(createSunflower("Sunflower", 380, 6))
+                cropsInField.push(createSunflower())
             } else if (crop === "Soybean") {
-                cropsInField.push(createSoybean("Soybean", 20, 4))
+                cropsInField.push(createSoybean())
             } else {
                 console.log("Y'all, this here crop ain't supposed to be here!")
             }
