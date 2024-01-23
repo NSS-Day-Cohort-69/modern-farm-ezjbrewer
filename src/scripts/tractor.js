@@ -1,4 +1,4 @@
-import { usePlants } from "./field.js"; // Returns empty array for crops in the field
+import { usePlants, addPlant } from "./field.js"; // Returns empty array for crops in the field
 
 import { createCorn } from "./seeds/corn.js"; // Returns corn object
 import { createAsparagus } from "./seeds/asparagus.js"; // Returns asparagus object
@@ -13,22 +13,20 @@ export const plantSeeds = (yearlyPlan) => {
     const cropsInField = usePlants() // Declaring the array, invoking it
 
     for (const row of yearlyPlan) {
-        for(const crop of row) {
-            if (crop === "Corn") {
-                cropsInField.push(createCorn())
-            } else if (crop === "Asparagus") {
-                cropsInField.push(createAsparagus())
-            } else if (crop === "Potato") {
-                cropsInField.push(createPotato())
-            } else if (crop === "Wheat") {
-                cropsInField.push(createWheat())
-            } else if (crop === "Sunflower") {
-                cropsInField.push(createSunflower())
-            } else if (crop === "Soybean") {
-                cropsInField.push(createSoybean())
-            } else {
-                console.log("Y'all, this here crop ain't supposed to be here!")
-            }
+        for(const seed of row) {
+            if (seed === "Corn") {
+                addPlant(createCorn())
+            } else if (seed === "Asparagus") {
+                addPlant(createAsparagus())
+            } else if (seed === "Potato") {
+                addPlant(createPotato())
+            } else if (seed === "Wheat") {
+                addPlant(createWheat())
+            } else if (seed === "Sunflower") {
+                addPlant(createSunflower())
+            } else if (seed === "Soybean") {
+                addPlant(createSoybean())
+            } 
         }
     }
 

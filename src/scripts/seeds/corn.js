@@ -1,14 +1,14 @@
-export const createCorn = (typeOfSeed, heightOfSeed, outputOfSeed) => {
+export const createCorn = () => {
     const seed = [
         {
-            type: typeOfSeed,
-            height: heightOfSeed,
-            output: outputOfSeed
+            type: "Corn",
+            height: 180,
+            output: 6
         },
         {
-            type: typeOfSeed,
-            height: heightOfSeed,
-            output: outputOfSeed
+            type: "Corn",
+            height: 180,
+            output: 6
         }
     ]
 
