@@ -1,8 +1,8 @@
-export const createAsparagus = (typeOfSeed, heightOfSeed, outputOfSeed) => {
+export const createAsparagus = () => {
     const seed = {
-        type: typeOfSeed,
-        height: heightOfSeed,
-        output: outputOfSeed
+        type: "Asparagus",
+        height: 24,
+        output: 4
     }
 
     return seed
