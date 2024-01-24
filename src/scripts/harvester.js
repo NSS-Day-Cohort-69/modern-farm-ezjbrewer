@@ -1,12 +1,7 @@
-import { plantSeeds } from "./tractor.js"
-//REMINDER: cropsInField = plantedSeeds
-
-
-
-export const harvestPlants = (plantedSeeds) => {
+export const harvestPlants = (cropsInField) => {
     const harvestedCrops = []
     
-    for (const crop of plantedSeeds) {
+    for (const crop of cropsInField) {
             if (crop.type !== "Corn") {
                 for (let i = 0; i < crop.output; i++) {
                     harvestedCrops.push(crop)
@@ -24,8 +19,6 @@ export const harvestPlants = (plantedSeeds) => {
     return harvestedCrops
 }
 
-//for (let i = 0; i <= corn.output / 2 - 1; i++) {   - CORN
-//for (let i = 0; i <= crop.output - 1; i++) {   - OTHER 5 CROPS
-
-// Only push one corn object into array. "if plant.type === "corn"... "
-// Output should = number of objects per crop. Use for loop to push object plant.output amount of times
+// Push only half of all corn into array
+// Create for loop to perform .push as many times as crop.output allows (exception: Corn)
+// Sort all crops but corn first 
