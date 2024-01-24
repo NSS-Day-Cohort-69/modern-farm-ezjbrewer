@@ -11,5 +11,8 @@ export const addPlant = (seed) => {
 }
 
 export const usePlants = () => {
-    return [...plantsGrowingInField]
+    return plantsGrowingInField
 }
+
+// Split the corn array in order to push those objects into the array as objects rather than an array. Use Array.isArray? Push everything else in a normal fashion
+// Return the array

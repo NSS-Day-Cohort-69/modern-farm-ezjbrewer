@@ -1,4 +1,4 @@
-import { usePlants, addPlant } from "./field.js"; // Returns empty array for crops in the field
+import { addPlant } from "./field.js"; // Returns empty array for crops in the field
 
 import { createCorn } from "./seeds/corn.js"; // Returns corn object
 import { createAsparagus } from "./seeds/asparagus.js"; // Returns asparagus object
@@ -10,7 +10,6 @@ import { createSoybean } from "./seeds/soybean.js"; // Returns soybean object
 
 
 export const plantSeeds = (yearlyPlan) => {
-    const cropsInField = usePlants() // Declaring the array, invoking it
 
     for (const row of yearlyPlan) {
         for(const seed of row) {
@@ -29,6 +28,7 @@ export const plantSeeds = (yearlyPlan) => {
             } 
         }
     }
-
-    return cropsInField
 }
+
+// Nested loop to access type of crop
+// Before adding seed with addPlant(), create seed for each crop in plan
